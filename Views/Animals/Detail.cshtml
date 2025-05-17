@@ -1,0 +1,53 @@
+@model AnimalShelter.Models.Animal?
+
+@{
+    ViewData["Title"] = Model?.Name + " Details" ?? "Animal Details";
+}
+
+@if (Model == null)
+{
+    <div class="alert alert-danger mt-5">
+        Animal not found
+    </div>
+}
+else
+{
+    <div class="container animal-detail">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="detail-image-container">
+                        <img src="~/images/@Model.Image" 
+                            class="detail-thumbnail img-fluid rounded-3" 
+                            alt="@Model.Name">
+                    </div>
+                    <div class="card-body text-center">
+                        <h1 class="display-5 mb-3">@Model.Name</h1>
+                        
+                        <div class="detail-meta mb-4">
+                            <span class="badge bg-primary me-2">@Model.Age years old</span>
+                            <span class="badge bg-secondary">@Model.Breed</span>
+                        </div>
+
+                        <div class="detail-description lead mb-4">
+                            @Model.Description
+                        </div>
+
+                        <a asp-controller="Animals" asp-action="Index" 
+                           class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left"></i> Back to Animals
+                        </a>
+
+                        <a asp-action="Adopt" 
+                        asp-route-id="@Model.Id" 
+                        asp-route-name="@Model.Name" 
+                        class="btn btn-success btn-lg">
+                        <i class="fas fa-paw"></i> Adopt @Model.Name
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

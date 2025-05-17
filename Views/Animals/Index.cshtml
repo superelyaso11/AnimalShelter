@@ -1,0 +1,58 @@
+@model List<AnimalShelter.Models.Animal>
+
+@{
+    ViewData["Title"] = "Available Animals";
+}
+
+<div class="container">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+
+<div class="mb-4"></div>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="fas fa-plus"></i> Add New Animal
+    </a>
+</div>
+
+<div class="container">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+        @if (!string.IsNullOrEmpty(Context.Request.Query["searchString"]))
+        {
+            <div class="alert alert-info mb-4">
+                Search results for: <strong>"@Context.Request.Query["searchString"]"</strong>
+            </div>
+        }
+
+        @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            All our animals have found loving homes! Check back later.
+        </div>
+    }
+    else
+    {
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+        @foreach (var animal in Model)
+        {
+            <div class="col">
+                <div class="animal-card bg-white rounded-3 shadow-sm p-3 text-center">
+                    <a asp-controller="Animals" asp-action="Detail" asp-route-id="@animal.Id" class="text-decoration-none">
+                        <div class="animal-image-container mb-3">
+                            <img src="~/images/@animal.Image" class="animal-thumbnail rounded-3" alt="@animal.Name">
+                        </div>
+                        <h3 class="h5 mb-1">@animal.Name</h3>
+                        <div class="animal-info text-muted">
+                            <p class="mb-1">@animal.Age years old</p>
+                            <p class="mb-0">@animal.Breed</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+    }
+</div>

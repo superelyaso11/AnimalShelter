@@ -1,0 +1,168 @@
+body {
+  display: flex;
+  background-color: #c7e5ff;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: left;
+  padding: 50px;
+  margin: 0;
+  min-height: 100vh;;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-top: 70px;
+}
+
+.navbar {
+    background-color: #a7e6ff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-lg {
+    background-color: #3e7bcf;
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-lg:hover {
+    background-color: #2c5aa8;
+    transform: translateY(-2px);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;;
+  width: 50%;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  top: 20%;
+  right: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+
+    .animal-card {
+        position: relative;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .animal-card:hover {
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transform: none;
+    }
+
+.animal-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.animal-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+    }
+
+.animal-card:hover .animal-thumbnail {
+  transform: scale(1.05);
+}
+
+    .animal-info {
+        font-size: 0.9rem;
+    }
+
+    .detail-image-container {
+        height: 700px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+.detail-thumbnail{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    }
+
+    .animal-detail .card {
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    .detail-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .adoption-form .form-label {
+    font-weight: 500;
+}
+
+.adoption-form .card {
+    border-radius: 0.5rem;
+}
+
+.adoption-form .btn-success {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    background-color: #a7e6ff;
+    padding: 15px;
+    margin-top: 10px;
+    }
+    
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    }
+
+  img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    }
+
+  header {
+    text-align: center;
+    }
+
+ .animal-thumbnail {
+            width: 120px;
+            height: 120px;
+        }
+}

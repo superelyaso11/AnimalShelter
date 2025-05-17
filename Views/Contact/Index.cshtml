@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container mt-5">
+    <h1 class="mb-4">@ViewData["Title"]</h1>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Get in Touch</h3>
+            <p>Have questions? Reach out to us!</p>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 123 Shelter Street, Pet City</p>
+                <p><i class="fas fa-phone"></i> +90 (552) 563-0489</p>
+                <p><i class="fas fa-envelope"></i> emaky13@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h3>Send Us a Message</h3>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-4">
+        <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="https://instagram.com/31yax" target="_blank" class="btn btn-outline-dark me-2">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com/elyas_ez" target="_blank" class="btn btn-outline-dark">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
