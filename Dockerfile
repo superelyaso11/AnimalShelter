@@ -3,14 +3,13 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
 # Copy project files first for caching
-COPY ["AnimalShelter/AnimalShelter.csproj", "AnimalShelter/"]
-RUN dotnet restore "AnimalShelter/AnimalShelter.csproj"
+COPY ["AnimalShelter.csproj", "."]
+RUN dotnet restore "AnimalShelter.csproj"
 
 # Copy everything else
 COPY . .
 
 # Build and publish
-WORKDIR "/src/AnimalShelter"
 RUN dotnet publish -c Release -o /app/publish
 
 # Runtime stage
