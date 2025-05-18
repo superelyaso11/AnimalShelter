@@ -419,6 +419,7 @@ C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_pro
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.RazorAssemblyInfo.cache
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.RazorAssemblyInfo.cs
+C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.sourcelink.json
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\scopedcss\bundle\AnimalShelter.styles.css
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\scopedcss\projectbundle\AnimalShelter.bundle.scp.css
@@ -496,4 +497,3 @@ C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_pro
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.pdb
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.genruntimeconfig.cache
 C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\ref\AnimalShelter.dll
-C:\Users\Emaky\Desktop\Uni Files\3rd Year-2nd Semester\Web Programming\Final_project\AnimalShelter\obj\Debug\net9.0\AnimalShelter.sourcelink.json
