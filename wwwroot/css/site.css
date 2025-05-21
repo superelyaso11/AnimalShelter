@@ -15,24 +15,24 @@ h1 {
 }
 
 .navbar {
-    background-color: #a7e6ff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #a7e6ff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .btn-lg {
-    background-color: #3e7bcf;
-    color: white;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.3s;
+  background-color: #3e7bcf;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
 .btn-lg:hover {
-    background-color: #2c5aa8;
-    transform: translateY(-2px);
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #2c5aa8;
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .image-container {
@@ -59,16 +59,16 @@ footer {
 }
 
 
-    .animal-card {
-        position: relative;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(0,0,0,0.1);
-    }
+.animal-card {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.1);
+}
 
-    .animal-card:hover {
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        transform: none;
-    }
+.animal-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: none;
+}
 
 .animal-image-container {
   position: relative;
@@ -84,22 +84,22 @@ footer {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-    }
+}
 
 .animal-card:hover .animal-thumbnail {
   transform: scale(1.05);
 }
 
-    .animal-info {
-        font-size: 0.9rem;
-    }
+.animal-info {
+  font-size: 0.9rem;
+}
 
-    .detail-image-container {
-        height: 700px;
-        overflow: hidden;
-        position: relative;
-        border-radius: 0.5rem 0.5rem 0 0;
-    }
+.detail-image-container {
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
 
 .detail-thumbnail{
   position: absolute;
@@ -108,43 +108,43 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-    }
+}
 
-    .animal-detail .card {
-        border: none;
-        border-radius: 0.5rem;
-    }
+.animal-detail .card {
+  border: none;
+  border-radius: 0.5rem;
+}
 
-    .detail-description {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+.detail-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-    .adoption-form .form-label {
-    font-weight: 500;
+.adoption-form .form-label {
+  font-weight: 500;
 }
 
 .adoption-form .card {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .adoption-form .btn-success {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
 }
 
 .tech-card {
-    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-    border-radius: 15px;
-    transition: transform 0.3s ease;
-    box-shadow:  5px 5px 15px #d1d9e6;
-  }
+  background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow:  5px 5px 15px #d1d9e6;
+}
 
-    .tech-card:hover {
-        transform: translateY(-5px);
-    }
+.tech-card:hover {
+  transform: translateY(-5px);
+}
 
 @media (max-width: 768px) {
   .navbar-collapse {
@@ -173,7 +173,7 @@ footer {
     }
 
  .animal-thumbnail {
-            width: 120px;
-            height: 120px;
-        }
+    width: 120px;
+    height: 120px;
+    }
 }

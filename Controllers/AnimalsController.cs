@@ -13,15 +13,14 @@ public class AnimalsController : Controller
         _context = context;
     }
 
-    // GET: Animals
+//GET: Animals
 public async Task<IActionResult> Index(string searchString)
 {
-    // Always start with non-adopted animals
+//Always start with non-adopted animals
     var query = _context.Animals!
         .Where(a => !a.IsAdopted)
         .AsQueryable();
 
-    // Apply search filter if provided
     if (!string.IsNullOrWhiteSpace(searchString))
     {
         query = query.Where(a => 
@@ -33,7 +32,7 @@ public async Task<IActionResult> Index(string searchString)
     return View(animals);
 }
 
-// GET: Animals/Detail
+//GET: Animals/Detail
 public async Task<IActionResult> Detail(int? id)
 {
     if (id == null || _context.Animals == null)
@@ -52,7 +51,7 @@ public async Task<IActionResult> Detail(int? id)
     return View(animal);
 }
 
-    // GET: Animals/Adopt/5
+//GET: Animals/Adopt
 public async Task<IActionResult> Adopt(int? id)
 {
     if (id == null || _context.Animals == null)
@@ -140,14 +139,13 @@ public IActionResult Create()
     return View();
 }
 
-// POST: Animals/Create
+//POST: Animals/Create
 [HttpPost]
 [ValidateAntiForgeryToken]
 public async Task<IActionResult> Create(Animal animal)
 {
     if (ModelState.IsValid)
     {
-        // Image handling code
         if (animal.ImageFile != null && animal.ImageFile.Length > 0)
         {
             var fileName = Guid.NewGuid() + Path.GetExtension(animal.ImageFile.FileName);

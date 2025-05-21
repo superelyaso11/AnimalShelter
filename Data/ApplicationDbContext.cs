@@ -15,7 +15,7 @@ namespace AnimalShelter.Data
         {
         }
 
-        // Database tables here
+        //Database tables here
         public DbSet<Animal>? Animals { get; set; }
         public DbSet<AdoptionApplication>? AdoptionApplications { get; set; }
 
@@ -27,7 +27,7 @@ namespace AnimalShelter.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure Animal entity
+            //Animal table configuration
             modelBuilder.Entity<Animal>(entity =>
             {
                 entity.HasKey(a => a.Id);
@@ -38,7 +38,7 @@ namespace AnimalShelter.Data
                 entity.Property(a => a.IsAdopted).HasDefaultValue(false);
             });
 
-            // Configure AdoptionApplication entity
+            //AdoptionApplication table configuration
             modelBuilder.Entity<AdoptionApplication>(entity =>
             {
                 entity.HasKey(a => a.Id);
@@ -48,14 +48,14 @@ namespace AnimalShelter.Data
                 entity.Property(a => a.Address).IsRequired().HasMaxLength(200);
                 entity.Property(a => a.ApplicationDate).HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                // Relationship with Animal
+                //Relationship with Animal
                 entity.HasOne(a => a.Animal)
                       .WithMany()
                       .HasForeignKey(a => a.AnimalId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
 
-            // Configure Contact entity
+            //Contact table configuration
             modelBuilder.Entity<Contact>(entity =>
             {
                 entity.HasKey(c => c.Id);

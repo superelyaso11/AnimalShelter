@@ -23,9 +23,9 @@ namespace AnimalShelter.Models
         [StringLength(500)]
         public string Description { get; set; } = string.Empty;
 
-        [NotMapped] // This property won't be stored in the database
-        public IFormFile? ImageFile { get; set; } // For file upload
-        public string Image { get; set; } = string.Empty; // Will store the filename
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
+        public string Image { get; set; } = string.Empty;
 
 
         public bool IsAdopted { get; set; } = false;

@@ -14,7 +14,7 @@ namespace AnimalShelter.Controllers
         _context = context;
     }
 
-    // GET: Donations
+    //GET: Donations
     public IActionResult Index()
     {
         return View();
