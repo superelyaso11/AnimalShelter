@@ -20,11 +20,13 @@ namespace AnimalShelter.Data
         public DbSet<AdoptionApplication>? AdoptionApplications { get; set; }
 
         public DbSet<Donation>? Donations { get; set; }
+        
+        public DbSet<Contact>? Contact { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
+
             // Configure Animal entity
             modelBuilder.Entity<Animal>(entity =>
             {
@@ -45,12 +47,21 @@ namespace AnimalShelter.Data
                 entity.Property(a => a.Phone).IsRequired().HasMaxLength(20);
                 entity.Property(a => a.Address).IsRequired().HasMaxLength(200);
                 entity.Property(a => a.ApplicationDate).HasDefaultValueSql("CURRENT_TIMESTAMP");
-                
+
                 // Relationship with Animal
                 entity.HasOne(a => a.Animal)
                       .WithMany()
                       .HasForeignKey(a => a.AnimalId)
                       .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Configure Contact entity
+            modelBuilder.Entity<Contact>(entity =>
+            {
+                entity.HasKey(c => c.Id);
+                entity.Property(c => c.Name).IsRequired().HasMaxLength(100);
+                entity.Property(c => c.Email).IsRequired().HasMaxLength(100);
+                entity.Property(c => c.Message).IsRequired().HasMaxLength(500);
             });
         }
     }
